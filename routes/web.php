@@ -14,5 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data= [
+        'links'=>["home","course","job","free-week"]
+    ];
+    return view('home',$data);
+});
+Route::get('/course', function () {
+    $data= [
+        'links'=>["home","course","job","free-week"]
+    ];
+    return view('course',$data);
+});
+Route::get('/job', function () {
+    $data= [
+        'links'=>["home","course","job","free-week"]
+    ];
+    return view('job',$data);
+});
+Route::get('/free-week', function () {
+    $data= [
+        'links'=>["home","course","job","free-week"]
+    ];
+    return view('freeweek',$data);
 });
